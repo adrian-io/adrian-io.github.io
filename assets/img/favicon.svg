@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .bg{fill:#070A0F}.band{fill:#A8C4FF;fill-opacity:.22}.line{stroke:#A8C4FF}.dot{fill:#5C6E8C}
+    @media (prefers-color-scheme: light){.bg{fill:#FBFCFD}.band{fill:#1E45C8;fill-opacity:.18}.line{stroke:#1E45C8}.dot{fill:#93A1B5}}
+  </style>
+  <rect class="bg" width="32" height="32" rx="7"/>
+  <path class="band" d="M16 6 C21 9 24 13 27 10 L27 22 C24 19 21 23 16 26 Z"/>
+  <path class="line" fill="none" stroke-width="1.8" stroke-linecap="round" d="M5 16 C10 16 12 9 17 9 C22 9 24 16 27 16"/>
+  <circle class="dot" cx="5.5" cy="9" r="1.5"/><circle class="dot" cx="7" cy="23" r="1.5"/><circle class="dot" cx="4.5" cy="19" r="1.2"/>
+</svg>

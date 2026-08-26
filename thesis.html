@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master's thesis — Adaptive timestep sampling for flow matching | Adrian Scholl</title>
+<meta name="description" content="Evaluating Adaptive Timestep Sampling for the Efficient Training of Flow Matching Models — master's thesis by Adrian Scholl, Computer Vision &amp; Learning group, LMU Munich, 2026. Abstract, findings and full PDF.">
+<link rel="canonical" href="https://adrianscholl.is-a.dev/thesis.html">
+<meta name="theme-color" content="#070A0F" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FBFCFD" media="(prefers-color-scheme: light)">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="bar">
+    <a class="home" href="index.html">Adrian&nbsp;Scholl</a>
+    <nav aria-label="Sections">
+      <a href="index.html#research">Research</a>
+      <a href="index.html#timeline">Timeline</a>
+      <a href="index.html#projects">Projects</a>
+      <a class="keep" href="index.html#contact">Contact</a>
+      <button class="themer" id="themer" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.6"></circle><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"></path></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap doc">
+  <p class="label">Master's thesis · M.Sc. Data Science · 2026</p>
+  <h1>Evaluating Adaptive Timestep Sampling for the Efficient Training of Flow Matching Models</h1>
+  <p class="updated">Computer Vision &amp; Learning group (CompVis), Faculty of Mathematics, Computer Science and Statistics, Ludwig-Maximilians-Universität München · Supervisor: Prof. Dr. Björn Ommer · Advisor: Felix Krause, M.Sc. · Submitted 6 August 2026</p>
+
+  <div class="contact" style="margin:26px 0 34px">
+    <a class="btn btn--fill" href="assets/scholl-adrian-master-thesis.pdf">Download thesis · PDF</a>
+    <a class="btn" href="assets/scholl-adrian-thesis-slides.pdf">Defence slides · PDF</a>
+    <a class="btn" href="index.html#research">Back to research</a>
+  </div>
+
+  <h2>Abstract</h2>
+  <p>Flow Matching has emerged as a simulation-free successor to diffusion models that preserves sample quality while enabling fewer-step inference on straight Conditional Optimal-Transport (CondOT) paths. As such models scale, training has become increasingly compute-intensive, making the allocation of training iterations across the timestep axis of the conditional flow matching objective a central concern. Uniform timestep sampling is known to be suboptimal, which motivated static non-uniform densities such as the logit-normal prior. These, however, cannot react to the evolving capacity of the network as it learns. The reinforcement-learning-based Adaptive Timestep Sampling (ATS) addresses exactly this deficit for denoising diffusion.</p>
+  <p>This thesis asks whether ATS transfers from discrete ε-prediction diffusion to continuous CondOT velocity regression. We port ATS to Flow Matching, propose a variance-reduced Advantage Actor-Critic variant (A2C-ATS) and a curvature-aware variant (LTE-ATS), and benchmark all three against uniform and static priors on CIFAR-10 under a shared U-Net backbone, analyzing their effect on training efficiency (E1), learning dynamics (E2), and inference geometry (E3).</p>
+  <p>Our comparison suite shows that the advantages of ATS do not transfer to CondOT Flow Matching. Adaptive timestep sampling matches uniform to within run-to-run variation (FID 14.18 versus 13.83) while adding roughly 10% wall-clock training time, because the loss-reduction reward on CondOT paths is minuscule and decays to near zero as the backbone converges. This leaves no stable non-uniform optimum and deprives the A2C critic of the structure it would need to lower variance. We further find the per-timestep loss and gradient-variance profile to be structured but to settle into a stationary U-shape after the first epochs (E2), so that a static prior already captures the exploitable structure effectively. This structure is directional: over-allocating training to the noise-proximal regime proves actively harmful to sample quality (FID up to +3.51 relative to uniform), whereas a data-biased prior does not degrade it. The curvature-driven LTE-ATS collapses entirely (FID 395.2), since the marginal curvature its reward targets is unreachable by the conditional objective, consistent with the E3 finding that training-time biases leave the geometry of the learned flow unchanged.</p>
+  <p>Beyond this negative transfer result, the U-shaped, largely stationary account of per-timestep difficulty and the finding that noise-biased sampling degrades sample quality advance the understanding of Flow Matching training dynamics and inform the principled design of future timestep-sampling methods.</p>
+
+  <h2>What the thesis found</h2>
+  <ul>
+    <li><strong>Adaptive sampling does not transfer.</strong> Reinforcement-learned timestep sampling matches uniform sampling to within run-to-run variation (FID 14.18 vs 13.83) and costs about 10% more wall-clock time.</li>
+    <li><strong>The reward signal dies.</strong> On CondOT paths the loss-reduction reward is minuscule and decays toward zero as the backbone converges, leaving no stable non-uniform optimum — and starving the A2C critic of the structure it would need for variance reduction.</li>
+    <li><strong>The difficulty profile is real but static.</strong> Per-timestep loss and gradient variance settle into a stationary U-shape after the first epochs, which is exactly what a fixed prior can already exploit.</li>
+    <li><strong>Direction matters more than adaptivity.</strong> Over-allocating training to the noise-proximal regime is actively harmful (up to +3.51 FID); a data-biased prior does no damage.</li>
+    <li><strong>Curvature-aware rewards collapse.</strong> LTE-ATS reaches FID 395.2 — the marginal curvature its reward targets is simply unreachable through the conditional objective.</li>
+    <li><strong>Training-time bias leaves inference geometry untouched</strong>, which is why the sampling schedule cannot buy what the objective does not encode.</li>
+  </ul>
+
+  <h2>Read it here</h2>
+  <p class="updated">124 pages. If the viewer does not load in your browser, use the download button above.</p>
+  <iframe class="viewer" src="assets/scholl-adrian-master-thesis.pdf#view=FitH" title="Master's thesis PDF" loading="lazy"></iframe>
+
+  <hr>
+  <p class="updated">The defence slides (86 slides, with the figures) are the faster way in: <a href="assets/scholl-adrian-thesis-slides.pdf">download the slides</a>.</p>
+</main>
+
+<footer class="foot">
+  <div class="wrap fr">
+    <span>© <span id="yr">2026</span> Adrian Scholl · Munich</span>
+    <span>No cookies, no tracking, no third-party requests.</span>
+    <span><a href="privacy.html">Privacy notice</a> · <a href="index.html">Home</a></span>
+  </div>
+</footer>
+<script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Adrian Scholl — CV</title>
+<style>
+@font-face{font-family:"Archivo";font-weight:100 900;font-display:block;
+  src:url("../assets/fonts/archivo-latin-wght-normal.woff2") format("woff2-variations")}
+@font-face{font-family:"Plex Mono";font-weight:400;font-display:block;
+  src:url("../assets/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2")}
+@page{size:A4;margin:14mm 15mm 12mm}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Archivo",Arial,sans-serif;color:#14181F;font-size:9.4pt;line-height:1.42;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1{font-size:22pt;font-weight:600;letter-spacing:-.02em;margin:0 0 3mm}
+.contact{font-family:"Plex Mono",monospace;font-size:7.8pt;color:#3E4855;letter-spacing:.01em;
+  padding-bottom:2.5mm;border-bottom:.6pt solid #14181F;margin-bottom:4mm}
+.contact a{color:#1E45C8;text-decoration:none}
+h2{font-family:"Plex Mono",monospace;font-size:7.6pt;font-weight:400;letter-spacing:.18em;text-transform:uppercase;
+  color:#6A7484;margin:5mm 0 2mm;padding-bottom:1mm;border-bottom:.4pt solid #D6DCE4}
+.item{margin-bottom:3mm;break-inside:avoid}
+.line{display:flex;justify-content:space-between;align-items:baseline;gap:6mm}
+.role{font-weight:600;font-size:10pt;letter-spacing:-.01em}
+.when{font-family:"Plex Mono",monospace;font-size:7.6pt;color:#6A7484;white-space:nowrap}
+.org{font-size:9pt;color:#1E45C8;margin:.4mm 0 1mm}
+ul{margin:0;padding-left:4.2mm}
+li{margin-bottom:.8mm;color:#2B3341}
+li::marker{color:#9AA4B2}
+.two{display:grid;grid-template-columns:26mm 1fr;gap:1.2mm 4mm;margin-top:1mm}
+.k{font-family:"Plex Mono",monospace;font-size:7.4pt;letter-spacing:.08em;text-transform:uppercase;color:#6A7484;padding-top:.5mm}
+.v{color:#2B3341}
+em{font-style:italic}
+.foot{margin-top:5mm;padding-top:2mm;border-top:.4pt solid #D6DCE4;font-family:"Plex Mono",monospace;
+  font-size:7pt;color:#8A93A1}
+</style>
+</head>
+<body>
+<h1>Adrian Scholl</h1>
+<div class="contact">Munich, Germany &nbsp;·&nbsp; adrian.scholl99@gmail.com &nbsp;·&nbsp; adrianscholl.is-a.dev &nbsp;·&nbsp; linkedin.com/in/adrian-scholl &nbsp;·&nbsp; github.com/adrian-io</div>
+
+<h2>Education</h2>
+<div class="item">
+  <div class="line"><span class="role">MSc Data Science — Elite Master Program</span><span class="when">10/2023 – 08/2026</span></div>
+  <div class="org">Ludwig-Maximilians-Universität München · Elite Network of Bavaria</div>
+  <ul>
+    <li>Thesis: <em>Evaluating Adaptive Timestep Sampling for the Efficient Training of Flow Matching Models</em> — Computer Vision &amp; Learning group (CompVis), Prof. Dr. Björn Ommer. Ported reinforcement-learned timestep sampling to conditional optimal-transport flow matching, proposed an A2C and a curvature-aware variant, benchmarked on CIFAR-10.</li>
+    <li>Seminar: Differentiable Bayesian Causal Structure Learning</li>
+    <li>Talk: Bayesian uncertainty quantification for energy price forecasting — international summer school, Hamburg</li>
+    <li>Erasmus: MSc Statistics and Operations Research, Universitat Politècnica de Catalunya, Barcelona</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span class="role">BSc Industrial Engineering and Management</span><span class="when">10/2018 – 11/2022</span></div>
+  <div class="org">Karlsruhe Institute of Technology</div>
+  <ul>
+    <li>Thesis: <em>Development of an Automated Conflict Prediction System by State Space ARIMA Methods</em>, in cooperation with the German Federal Foreign Office</li>
+    <li>Majors: machine learning, data mining and applications, applications of AI, econometrics, neural networks and genetic algorithms, financial data science, global optimization</li>
+    <li>Teaching: tutor for Econometrics (multiple regression in R), Statistics II (~50 students in two courses) and the computer science preparatory courses (Java)</li>
+    <li>Germany Scholarship (Deutschlandstipendium), sponsored by QuantCo</li>
+  </ul>
+</div>
+
+<h2>Experience</h2>
+<div class="item">
+  <div class="line"><span class="role">Working Student, Machine Learning</span><span class="when">11/2024 – 01/2025</span></div>
+  <div class="org">Scalable Capital — Data Science Unit, Munich</div>
+  <ul>
+    <li>Built an automated hyperparameter evaluation framework for retrieval-augmented generation (RAG) in AI chatbot agents</li>
+    <li>Implemented HyDE retrieval, advanced chunking and re-ranking techniques, and LLM-as-a-judge evaluation (LlamaIndex)</li>
+    <li>Cut RAG evaluation runtime through parallel processing and asynchronous API calls</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span class="role">Working Student, Data Analytics &amp; Analytics Engineering</span><span class="when">10/2023 – 09/2024</span></div>
+  <div class="org">FINN — Fleet Intelligence Unit, Munich</div>
+  <ul>
+    <li>Solely responsible for ~400 data warehouse models of the fleet department (dbt, GitHub, BigQuery SQL)</li>
+    <li>Developed a cash forecasting model enabling management to improve long-term liquidity planning</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span class="role">Intern, Data Analytics</span><span class="when">04/2023 – 09/2023</span></div>
+  <div class="org">FINN — Fleet Intelligence Unit, Munich</div>
+  <ul>
+    <li>Owned the project tracking car financings and predicting vehicle underutilization costs via ML (Python, BigQuery SQL)</li>
+    <li>Prepared analyses, visualizations and dashboards supporting management decisions and investor requests, leading to $110m Series C funding (BigQuery SQL, Looker, LookML)</li>
+    <li>Built and maintained data warehouse models for KPI tracking, analyses and automations (dbt, BigQuery SQL)</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span class="role">Data Science Consultant, self-employed</span><span class="when">02/2022 – 09/2022</span></div>
+  <div class="org">Auswärtiges Amt (German Federal Foreign Office) — S 05 PREVIEW Crisis Early Warning, Berlin</div>
+  <ul>
+    <li>Research on crisis early warning with state-space time series models; improved Auto-ARIMA predictions by 56% (MAE)</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span class="role">Intern, Data Science</span><span class="when">10/2021 – 01/2022</span></div>
+  <div class="org">Auswärtiges Amt — S 05 PREVIEW Crisis Early Warning, Berlin</div>
+  <ul>
+    <li>Developed an interactive dashboard enabling strategic analysis of the German embassy network (Tableau)</li>
+    <li>Consulted on process digitization and created data schemas for a third-party monitoring project in the Middle East</li>
+    <li>Created conflict visualizations (maps, charts, dashboards); presented conflict predictions at internal expert workshops</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span class="role">Intern, Pre-Sales</span><span class="when">06/2018 – 09/2018</span></div>
+  <div class="org">SAP SE — Public Services / Smart Cities, Walldorf</div>
+  <ul>
+    <li>Analyzed the smart city start-up market and evaluated partnership opportunities; consulted on SAP IoT, S/4HANA and AI/ML use cases</li>
+  </ul>
+</div>
+
+<h2>Skills &amp; Projects</h2>
+<div class="two">
+  <div class="k">Languages</div><div class="v">German (native), English (C1), Spanish (B2), French (A2)</div>
+  <div class="k">AI / ML</div><div class="v">PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, LlamaIndex, statsmodels, sktime, SciPy, CVXPY; flow matching and diffusion, reinforcement learning (REINFORCE, A2C), Bayesian inference, state-space models</div>
+  <div class="k">Software dev</div><div class="v">Python, Java, Git, CI/CD, FastAPI, Pydantic, SQLAlchemy</div>
+  <div class="k">Data</div><div class="v">SQL, R, BigQuery, dbt, Looker, LookML, Tableau, GSheets, Excel</div>
+  <div class="k">Projects</div><div class="v">VISTA — web app tracking attention level while studying via computer vision · EthXPose — identifying fraudulent Ethereum wallets from transaction graph embeddings · Bayesian energy price modelling under arbitrage constraints · Default prediction for commercial real estate mortgages · PISA score prediction with pooled OLS and clustered standard errors</div>
+</div>
+
+<div class="foot">Public version — full CV with grades and further details available on request · adrianscholl.is-a.dev</div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adrian Scholl — Generative models &amp; uncertainty quantification</title>
+<meta name="description" content="Adrian Scholl, MSc Data Science (LMU Munich). Flow matching, uncertainty quantification and Bayesian modelling in research; forecasting, RAG and data platforms in practice. Applying for PhD positions in uncertainty quantification for deep learning.">
+<meta name="author" content="Adrian Scholl">
+<link rel="canonical" href="https://adrianscholl.is-a.dev/">
+<meta name="theme-color" content="#070A0F" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FBFCFD" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Adrian Scholl — Generative models &amp; uncertainty quantification">
+<meta property="og:description" content="MSc Data Science, LMU Munich. Flow matching, Bayesian uncertainty quantification, forecasting. Applying for PhD positions in UQ for deep learning.">
+<meta property="og:url" content="https://adrianscholl.is-a.dev/">
+<meta property="og:image" content="https://adrianscholl.is-a.dev/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Adrian Scholl",
+"jobTitle":"Data Scientist","url":"https://adrianscholl.is-a.dev/",
+"alumniOf":[{"@type":"CollegeOrUniversity","name":"Ludwig-Maximilians-Universität München"},
+{"@type":"CollegeOrUniversity","name":"Karlsruhe Institute of Technology"},
+{"@type":"CollegeOrUniversity","name":"Universitat Politècnica de Catalunya"}],
+"knowsAbout":["Flow matching","Generative models","Uncertainty quantification","Bayesian statistics","Time series forecasting","Machine learning"],
+"sameAs":["https://github.com/adrian-io","https://www.linkedin.com/in/adrian-scholl"]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="bar">
+    <a class="home" href="#top">Adrian&nbsp;Scholl</a>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a class="keep" href="#contact">Contact</a>
+      <button class="themer" id="themer" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.6"></circle><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"></path></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="wrap inner">
+    <p class="label kicker">MSc Data Science · LMU Munich · Computer Vision &amp; Learning</p>
+    <h1>Adrian Scholl</h1>
+    <p class="tagline">Generative models and the uncertainty around them — how a model transports noise into structure, and how much that structure deserves to be trusted.</p>
+    <div class="cta">
+      <a class="btn btn--fill" href="thesis.html">Read the thesis</a>
+      <a class="btn" href="assets/cv-adrian-scholl.pdf">CV · PDF</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <div class="wrap caption">Live: particles transported from Gaussian noise onto a Gaussian-process posterior computed in the browser. Their spread follows the posterior standard deviation — tight where there is data, wide where there is none.</div>
+</section>
+
+<div class="status">
+  <div class="wrap row"><span class="dot" aria-hidden="true"></span>
+    <span><b>Now</b> — applying for PhD positions in <b>uncertainty quantification for deep learning</b>, ideally with an energy or climate application. Munich or elsewhere in Europe. MSc completed August 2026.</span>
+  </div>
+</div>
+
+<section class="band" id="research">
+  <div class="wrap">
+    <div class="head">
+      <h2>Research</h2>
+      <p>Where the work sits: generative modelling on one side, Bayesian uncertainty on the other, and the question of how to make deep models say what they don't know.</p>
+    </div>
+    <p class="lede">My master's thesis studies how training compute should be distributed across the timestep axis of a flow-matching model; my statistical work — energy price forecasting, causal structure learning, crisis early warning — has been about predictive intervals rather than point estimates. The PhD I am looking for sits exactly where those two lines cross: uncertainty quantification for deep generative models, and calibration under distribution shift.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="tick"></div>
+        <h3>Adaptive timestep sampling for flow matching</h3>
+        <p>Master's thesis at CompVis. Does reinforcement-learned timestep sampling transfer from denoising diffusion to conditional optimal-transport flow matching? Result: no — adaptive sampling matches uniform within run-to-run variation (FID 14.18 vs 13.83) for ~10% more wall-clock, because the loss-reduction reward decays to nothing as the backbone converges. The per-timestep difficulty profile turns out to be U-shaped and stationary, and noise-biased sampling actively hurts sample quality.</p>
+        <p><a href="thesis.html">Abstract, findings and full PDF →</a></p>
+        <span class="meta">Flow matching · A2C · PyTorch · CIFAR-10</span>
+      </article>
+      <article class="card">
+        <div class="tick"></div>
+        <h3>Bayesian uncertainty for energy prices</h3>
+        <p>Predictive intervals for day-ahead electricity prices, and what they are worth once an arbitrage strategy has to respect them. Presented at an international summer school in Hamburg.</p>
+        <span class="meta">Bayesian · Prophet · CVXPY</span>
+      </article>
+      <article class="card">
+        <div class="tick"></div>
+        <h3>Differentiable Bayesian causal structure learning</h3>
+        <p>Master's seminar: learning graph structure by gradient descent and variational inference instead of combinatorial search over DAGs.</p>
+        <span class="meta">Causal · Variational inference</span>
+      </article>
+      <article class="card">
+        <div class="tick"></div>
+        <h3>State-space models for conflict early warning</h3>
+        <p>Bachelor's thesis and a following consulting engagement with the German Federal Foreign Office: automated conflict prediction with state-space ARIMA methods, improving on the Auto-ARIMA baseline by 56% MAE.</p>
+        <span class="meta">State space · statsmodels · Auswärtiges Amt</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt" id="timeline">
+  <div class="wrap">
+    <div class="head">
+      <h2>Everything, filterable</h2>
+      <p>Studies, roles, teaching and talks in one list. Pick a method and the entries that used it stay lit.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter entries by topic">
+      <button class="f" type="button" aria-pressed="true" data-tag="all">Everything</button>
+      <button class="f" type="button" aria-pressed="false" data-tag="gen">Generative models</button>
+      <button class="f" type="button" aria-pressed="false" data-tag="uq">Bayesian &amp; UQ</button>
+      <button class="f" type="button" aria-pressed="false" data-tag="forecast">Forecasting</button>
+      <button class="f" type="button" aria-pressed="false" data-tag="llm">LLM &amp; RAG</button>
+      <button class="f" type="button" aria-pressed="false" data-tag="data">Data engineering</button>
+      <button class="f" type="button" aria-pressed="false" data-tag="teach">Teaching</button>
+      <span class="count" id="count" aria-live="polite">15 of 15 entries</span>
+    </div>
+    <div id="rows">
+
+      <article class="row" data-tags="gen uq"><span class="yr">2026</span>
+        <div><p class="org">LMU Munich · Computer Vision &amp; Learning, Prof. Dr. Björn Ommer</p>
+          <h3>MSc Data Science — Elite Master Program, completed</h3>
+          <p>Thesis: <em>Evaluating Adaptive Timestep Sampling for the Efficient Training of Flow Matching Models</em>. Advisor: Felix Krause. Two years of statistics and computer science in equal measure, with the emphasis on statistical modelling and deep learning.</p></div>
+        <div class="tags"><span class="t">flow matching</span><span class="t">PyTorch</span><span class="t">RL</span></div></article>
+
+      <article class="row" data-tags="uq forecast"><span class="yr">2025</span>
+        <div><p class="org">International summer school, Hamburg</p>
+          <h3>Talk — Bayesian uncertainty quantification for energy price forecasting</h3>
+          <p>Predictive intervals for day-ahead prices under arbitrage constraints: how quickly the interval widens once a trading strategy has to respect it.</p></div>
+        <div class="tags"><span class="t">Bayesian</span><span class="t">energy</span><span class="t">Prophet</span></div></article>
+
+      <article class="row" data-tags="uq"><span class="yr">2025</span>
+        <div><p class="org">LMU Munich</p>
+          <h3>Seminar — Differentiable Bayesian causal structure learning</h3>
+          <p>Gradient-based, variational search over graph structures instead of combinatorial search.</p></div>
+        <div class="tags"><span class="t">causal</span><span class="t">variational</span></div></article>
+
+      <article class="row" data-tags="llm"><span class="yr">2024 — 25</span>
+        <div><p class="org">Scalable Capital · Data Science Unit, Munich</p>
+          <h3>Working Student, Machine Learning</h3>
+          <p>Built an automated hyperparameter evaluation framework for retrieval-augmented generation in chatbot agents: HyDE retrieval, advanced chunking and re-ranking, LLM-as-a-judge scoring. Cut evaluation runtime with parallel processing and asynchronous API calls.</p></div>
+        <div class="tags"><span class="t">LlamaIndex</span><span class="t">RAG</span><span class="t">async</span></div></article>
+
+      <article class="row" data-tags="data forecast"><span class="yr">2023 — 24</span>
+        <div><p class="org">FINN · Fleet Intelligence Unit, Munich</p>
+          <h3>Working Student, Data Analytics &amp; Analytics Engineering</h3>
+          <p>Sole owner of ~400 data warehouse models for the fleet department. Built the cash forecasting model management uses for long-term liquidity planning.</p></div>
+        <div class="tags"><span class="t">dbt</span><span class="t">BigQuery</span><span class="t">forecasting</span></div></article>
+
+      <article class="row" data-tags="data"><span class="yr">2023</span>
+        <div><p class="org">FINN · Fleet Intelligence Unit, Munich</p>
+          <h3>Intern, Data Analytics</h3>
+          <p>Owned the project tracking car financings and predicting vehicle underutilisation costs with ML. Built the analyses, dashboards and investor answers behind a $110m Series C.</p></div>
+        <div class="tags"><span class="t">Python</span><span class="t">Looker</span><span class="t">LookML</span></div></article>
+
+      <article class="row" data-tags="uq forecast"><span class="yr">2023</span>
+        <div><p class="org">Universitat Politècnica de Catalunya, Barcelona</p>
+          <h3>Erasmus — MSc Statistics and Operations Research</h3>
+          <p>A semester of statistics and optimisation abroad.</p></div>
+        <div class="tags"><span class="t">statistics</span><span class="t">optimisation</span></div></article>
+
+      <article class="row" data-tags="forecast"><span class="yr">2022</span>
+        <div><p class="org">Auswärtiges Amt · S 05 PREVIEW crisis early warning, Berlin</p>
+          <h3>Data Science Consultant, self-employed</h3>
+          <p>Research on improving the crisis early warning system with state-space time series models; outperformed the models then in use, improving Auto-ARIMA predictions by 56%.</p></div>
+        <div class="tags"><span class="t">state space</span><span class="t">statsmodels</span></div></article>
+
+      <article class="row" data-tags="forecast"><span class="yr">2022</span>
+        <div><p class="org">Karlsruhe Institute of Technology</p>
+          <h3>BSc Industrial Engineering and Management</h3>
+          <p>Thesis: <em>Development of an Automated Conflict Prediction System by State Space ARIMA Methods</em>, in cooperation with the German Federal Foreign Office. Majors in machine learning, data mining, econometrics, neural networks and global optimisation.</p></div>
+        <div class="tags"><span class="t">ARIMA</span><span class="t">econometrics</span></div></article>
+
+      <article class="row" data-tags="forecast data"><span class="yr">2021 — 22</span>
+        <div><p class="org">Auswärtiges Amt · S 05 PREVIEW, Berlin</p>
+          <h3>Intern, Data Science</h3>
+          <p>Interactive dashboard for strategic analysis of the German embassy network. Conflict indicators prepared, evaluated and visualised as maps and charts; predictions presented at internal expert workshops. Consulted on process digitisation and data schemas for third-party monitoring in the Middle East.</p></div>
+        <div class="tags"><span class="t">Tableau</span><span class="t">geospatial</span></div></article>
+
+      <article class="row" data-tags="teach"><span class="yr">2021</span>
+        <div><p class="org">Karlsruhe Institute of Technology</p>
+          <h3>Tutor — Economics III: Introduction to Econometrics</h3>
+          <p>Multiple regression in R, taught in weekly tutorials.</p></div>
+        <div class="tags"><span class="t">R</span><span class="t">teaching</span></div></article>
+
+      <article class="row" data-tags="teach"><span class="yr">2020 — 21</span>
+        <div><p class="org">Karlsruhe Institute of Technology</p>
+          <h3>Tutor — Statistics II</h3>
+          <p>Around 50 students across two courses.</p></div>
+        <div class="tags"><span class="t">statistics</span><span class="t">teaching</span></div></article>
+
+      <article class="row" data-tags="teach"><span class="yr">2019 — 20</span>
+        <div><p class="org">Karlsruhe Institute of Technology</p>
+          <h3>Tutor — Computer science preparatory courses</h3>
+          <p>Java, for incoming first-year students.</p></div>
+        <div class="tags"><span class="t">Java</span><span class="t">teaching</span></div></article>
+
+      <article class="row" data-tags="data"><span class="yr">2018</span>
+        <div><p class="org">SAP SE · Public Services and Smart Cities, Walldorf</p>
+          <h3>Intern, Pre-Sales</h3>
+          <p>Analysed the smart-city start-up market and evaluated partnership opportunities; presented IoT, S/4HANA and ML use cases at the Smart City Forum.</p></div>
+        <div class="tags"><span class="t">analysis</span><span class="t">consulting</span></div></article>
+
+      <article class="row" data-tags="uq gen"><span class="yr">2018 — 26</span>
+        <div><p class="org">Awards &amp; programmes</p>
+          <h3>Germany Scholarship (QuantCo) · Elite Network of Bavaria</h3>
+          <p>Deutschlandstipendium sponsored by QuantCo during the bachelor's; the LMU Data Science master's is an Elite Master Program of the Elite Network of Bavaria.</p></div>
+        <div class="tags"><span class="t">scholarship</span></div></article>
+
+    </div>
+  </div>
+</section>
+
+<section class="band" id="projects">
+  <div class="wrap">
+    <div class="head">
+      <h2>Projects</h2>
+      <p>Things built outside coursework, or coursework that outgrew it.</p>
+    </div>
+    <div class="proj">
+      <article>
+        <h3>VISTA</h3>
+        <dl>
+          <dt>Problem</dt><dd>Knowing whether you are actually concentrating while studying, rather than guessing afterwards.</dd>
+          <dt>Method</dt><dd>Webcam stream processed by a CNN to estimate attention level in real time.</dd>
+          <dt>Stack</dt><dd>Python, OpenCV, FastAPI</dd>
+        </dl>
+        <div class="links"><a href="https://github.com/adrian-io">Code</a></div>
+      </article>
+      <article>
+        <h3>EthXPose</h3>
+        <dl>
+          <dt>Problem</dt><dd>Fraud on Ethereum hides in the structure of transactions, not in single transfers.</dd>
+          <dt>Method</dt><dd>Graph embeddings over the transaction network, classified against known fraudulent wallets.</dd>
+          <dt>Stack</dt><dd>Python, graph embeddings, web app</dd>
+        </dl>
+        <div class="links"><a href="https://github.com/adrian-io">Code</a></div>
+      </article>
+      <article>
+        <h3>Bayesian energy price modelling</h3>
+        <dl>
+          <dt>Problem</dt><dd>A point forecast of the day-ahead price is useless to a battery operator who has to commit to a schedule.</dd>
+          <dt>Method</dt><dd>Bayesian forecasting with explicit predictive intervals, optimised under arbitrage constraints.</dd>
+          <dt>Stack</dt><dd>Prophet, CVXPY, statsmodels</dd>
+        </dl>
+      </article>
+      <article>
+        <h3>Default prediction for commercial real estate</h3>
+        <dl>
+          <dt>Problem</dt><dd>Which commercial property mortgages default, and on what evidence.</dd>
+          <dt>Method</dt><dd>Supervised classification with careful treatment of class imbalance and feature leakage.</dd>
+          <dt>Stack</dt><dd>scikit-learn, pandas</dd>
+        </dl>
+      </article>
+    </div>
+    <p style="margin-top:22px;color:var(--muted);font-size:15px">Also: PISA score prediction with pooled OLS and clustered standard errors · health insurance cost prediction · a Java GUI for university course management.</p>
+  </div>
+</section>
+
+<section class="band band--alt" id="toolbox">
+  <div class="wrap">
+    <div class="head"><h2>Toolbox</h2><p>Honest levels — the things I would be comfortable being asked about in an interview.</p></div>
+    <div class="split">
+      <ul class="stack">
+        <li><span class="k">Research</span><span><strong>PyTorch</strong>, TensorFlow, Keras, scikit-learn, statsmodels, sktime, SciPy, CVXPY, OpenCV, LlamaIndex</span></li>
+        <li><span class="k">Methods</span><span>Flow matching and diffusion, reinforcement learning (REINFORCE, A2C), Bayesian inference, state-space models, SARIMAX and ARMA-GARCH, GLM/GAM, tree ensembles, clustering</span></li>
+        <li><span class="k">Engineering</span><span><strong>Python</strong>, Java, Git, CI/CD, FastAPI, Pydantic, SQLAlchemy</span></li>
+      </ul>
+      <ul class="stack">
+        <li><span class="k">Data</span><span><strong>SQL</strong>, R, dbt, BigQuery, Looker and LookML, Tableau, GSheets, Excel</span></li>
+        <li><span class="k">Languages</span><span>German (native) · English (C1) · Spanish (B2) · French (A2)</span></li>
+        <li><span class="k">Teaching</span><span>Three years of university tutorials in statistics, econometrics and programming</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="about">
+  <div class="wrap">
+    <div class="head"><h2>About</h2></div>
+    <div class="about">
+      <div id="photo-holder">
+        <img src="assets/img/adrian.jpg" alt="Adrian Scholl" width="880" height="1100" loading="lazy">
+      </div>
+      <div>
+        <p>I came to machine learning through industrial engineering at KIT, and to statistics through a Foreign Office project on predicting armed conflict — which is where I learned that a forecast without an honest interval is a liability rather than an asset.</p>
+        <p>Since then: a semester of statistics and operations research in Barcelona, an Elite Master's in Data Science at LMU Munich, a thesis in the Computer Vision &amp; Learning group on how flow-matching models should spend their training budget, and four years of applied work — data warehouses at FINN, retrieval-augmented chatbots at Scalable Capital, crisis early warning in Berlin.</p>
+        <p>What holds it together is a preference for models that are explicit about their own uncertainty. That is the thread I want to keep pulling in a PhD, preferably somewhere the answer matters — energy systems, climate, infrastructure.</p>
+        <p>Outside that: three and a half languages, long-distance hiking maps, and an ongoing argument with myself about whether Bayesian methods scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt" id="contact">
+  <div class="wrap">
+    <div class="head"><h2>Contact</h2><p>Email is the reliable channel. Happy to send the full CV, transcripts or the thesis on request.</p></div>
+    <p class="lede" id="mailline"><noscript>adrian.scholl99 [at] gmail [dot] com</noscript></p>
+    <div class="contact">
+      <a class="btn btn--fill" id="mailbtn" href="#">Write me</a>
+      <a class="btn" href="https://www.linkedin.com/in/adrian-scholl" rel="me noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/adrian-io" rel="me noopener">GitHub</a>
+      <a class="btn" href="assets/cv-adrian-scholl.pdf">CV · PDF</a>
+      <a class="btn" href="thesis.html">Thesis</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap fr">
+    <span>© <span id="yr">2026</span> Adrian Scholl · Munich</span>
+    <span>No cookies, no tracking, no third-party requests.</span>
+    <span><a href="privacy.html">Privacy notice</a> · <a href="#top">Back to top</a></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

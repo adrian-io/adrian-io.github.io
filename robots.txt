@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adrianscholl.is-a.dev/sitemap.xml
