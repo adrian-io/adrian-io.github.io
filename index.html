@@ -324,8 +324,34 @@
         </dl>
         <div class="links"><a href="https://github.com/adrian-io/mortgage-default-prediction">Code</a></div>
       </article>
+      <article>
+        <h3>PISA scores from country indicators</h3>
+        <dl>
+          <dt>Problem</dt><dd>Predicting a country's PISA results in maths, reading and science from economic and social indicators alone.</dd>
+          <dt>Method</dt><dd>Pooled OLS on OECD and World Bank panel data with standard errors clustered by country, and regressors added by cross-validated forward selection: out-of-sample R&sup2; of 0.78 for maths, 0.70 for reading and 0.72 for science.</dd>
+          <dt>Stack</dt><dd>Python, linearmodels, scikit-learn, pandas</dd>
+        </dl>
+        <div class="links"><a href="https://github.com/adrian-io/pisa-clustered-ols">Code</a></div>
+      </article>
+      <article>
+        <h3>Health insurance cost prediction</h3>
+        <dl>
+          <dt>Problem</dt><dd>What medical costs a health insurer should expect from each policyholder, given age, BMI, smoking and a few other attributes.</dd>
+          <dt>Method</dt><dd>K-means splits 1,338 policyholders into three cost groups; classifiers predict each person's group with 92% accuracy, and regressions that use it edge out the best single model (test RMSE 4,380 vs 4,434).</dd>
+          <dt>Stack</dt><dd>Python, scikit-learn, Keras, pandas</dd>
+        </dl>
+        <div class="links"><a href="https://github.com/adrian-io/medical-cost-prediction">Code</a></div>
+      </article>
+      <article>
+        <h3>Course directory app</h3>
+        <dl>
+          <dt>Problem</dt><dd>Keeping a searchable catalogue of university lectures, with professor and semester, that can be edited and shared as files.</dd>
+          <dt>Method</dt><dd>A desktop app on the model-view-controller pattern: filterable, sortable lecture table, import and export of tab-separated files, help page and dark theme.</dd>
+          <dt>Stack</dt><dd>Java, Swing, FlatLaf</dd>
+        </dl>
+        <div class="links"><a href="https://github.com/adrian-io/course-directory-gui">Code</a></div>
+      </article>
     </div>
-    <p style="margin-top:22px;color:var(--muted);font-size:15px">Also: <a href="https://github.com/adrian-io/pisa-clustered-ols">PISA score prediction with pooled OLS and clustered standard errors</a> · <a href="https://github.com/adrian-io/medical-cost-prediction">health insurance cost prediction</a> · <a href="https://github.com/adrian-io/course-directory-gui">a Java GUI for university course management</a>.</p>
   </div>
 </section>
 
@@ -358,7 +384,6 @@
         <p>I came to machine learning through industrial engineering at KIT, and to statistics through a Foreign Office project on predicting armed conflict — which is where I learned that a forecast without an honest interval is a liability rather than an asset.</p>
         <p>Since then: an Elite Master's in Data Science at LMU Munich with an exchange semester in Barcelona, a thesis in the Computer Vision &amp; Learning group on how flow-matching models should spend their training budget, and four years of applied work — data warehouses at FINN, retrieval-augmented chatbots at Scalable Capital, crisis early warning in Berlin.</p>
         <p>What holds it together is a preference for models that are explicit about their own uncertainty. That is the thread I want to keep pulling in a PhD, preferably where the answer matters, such as energy systems and medicine.</p>
-        <p>Outside that: three and a half languages, long-distance hiking maps, and an ongoing argument with myself about whether Bayesian methods scale.</p>
       </div>
     </div>
   </div>
