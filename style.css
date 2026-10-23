@@ -154,9 +154,11 @@ header.top{position:sticky;top:0;z-index:40;backdrop-filter:blur(10px);
 .band--alt .t{background:var(--surface)}
 .row.hit .t{color:var(--signal);border-color:color-mix(in oklab,var(--signal) 35%,var(--line));
   background:var(--signal-soft)}
+.pubs .links{display:flex;flex-wrap:wrap;align-items:flex-start;gap:6px 16px;justify-content:flex-end;
+  padding-top:2px;font-size:14px}
 @media (max-width:760px){
   .row{grid-template-columns:1fr;gap:8px;padding:18px 0}
-  .tags{justify-content:flex-start;padding-top:2px}
+  .tags,.pubs .links{justify-content:flex-start;padding-top:2px}
   .filters{top:58px}
 }
 

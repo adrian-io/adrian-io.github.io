@@ -3,27 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Adrian Scholl — Generative models &amp; uncertainty quantification</title>
-<meta name="description" content="Adrian Scholl, MSc Data Science (LMU Munich). Flow matching, uncertainty quantification and Bayesian modelling in research; forecasting, RAG and data platforms in practice. Applying for PhD positions in uncertainty quantification for deep learning.">
+<title>Adrian Scholl · Bayesian machine learning, uncertainty quantification and generative models</title>
+<meta name="description" content="Adrian Scholl, MSc Data Science (LMU Munich). Bayesian statistics and uncertainty quantification, generative modelling with flow matching, probabilistic forecasting. Applying for PhD positions in uncertainty quantification and Bayesian deep learning.">
+<meta name="google-site-verification" content="WuKKn2NZkHyqCjTrlQpqt6SM6tI__wuhczB7am4VRDk">
 <meta name="author" content="Adrian Scholl">
-<link rel="canonical" href="https://adrianscholl.is-a.dev/">
+<link rel="canonical" href="https://adrian-io.github.io/">
 <meta name="theme-color" content="#070A0F" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FBFCFD" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Adrian Scholl — Generative models &amp; uncertainty quantification">
-<meta property="og:description" content="MSc Data Science, LMU Munich. Flow matching, Bayesian uncertainty quantification, forecasting. Applying for PhD positions in UQ for deep learning.">
-<meta property="og:url" content="https://adrianscholl.is-a.dev/">
-<meta property="og:image" content="https://adrianscholl.is-a.dev/assets/img/og.png">
+<meta property="og:title" content="Adrian Scholl · Bayesian machine learning, uncertainty quantification and generative models">
+<meta property="og:description" content="MSc Data Science, LMU Munich. Bayesian uncertainty quantification, generative modelling with flow matching, probabilistic forecasting. Applying for PhD positions in uncertainty quantification and Bayesian deep learning.">
+<meta property="og:url" content="https://adrian-io.github.io/">
+<meta property="og:image" content="https://adrian-io.github.io/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Adrian Scholl",
-"jobTitle":"Data Scientist","url":"https://adrianscholl.is-a.dev/",
+"jobTitle":"Data Scientist","url":"https://adrian-io.github.io/",
 "alumniOf":[{"@type":"CollegeOrUniversity","name":"Ludwig-Maximilians-Universität München"},
 {"@type":"CollegeOrUniversity","name":"Karlsruhe Institute of Technology"},
 {"@type":"CollegeOrUniversity","name":"Universitat Politècnica de Catalunya"}],
-"knowsAbout":["Flow matching","Generative models","Uncertainty quantification","Bayesian statistics","Time series forecasting","Machine learning"],
+"knowsAbout":["Uncertainty quantification","Bayesian statistics","Bayesian deep learning","Generative models","Flow matching","Probabilistic forecasting","Machine learning"],
 "sameAs":["https://github.com/adrian-io","https://www.linkedin.com/in/adrian-scholl"]}
 </script>
 </head>
@@ -35,6 +36,7 @@
     <a class="home" href="#top">Adrian&nbsp;Scholl</a>
     <nav aria-label="Sections">
       <a href="#research">Research</a>
+      <a href="#writing">Writing</a>
       <a href="#timeline">Timeline</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
@@ -50,9 +52,9 @@
 <section class="hero" id="top">
   <canvas id="field" aria-hidden="true"></canvas>
   <div class="wrap inner">
-    <p class="label kicker">MSc Data Science · LMU Munich · Computer Vision &amp; Learning</p>
+    <p class="label kicker">MSc Data Science · LMU Munich · 2026</p>
     <h1>Adrian Scholl</h1>
-    <p class="tagline">Generative models and the uncertainty around them — how a model transports noise into structure, and how much that structure deserves to be trusted.</p>
+    <p class="tagline">Machine learning that knows what it doesn't know. I work with Bayesian statistics and uncertainty quantification, and with generative models such as flow matching.</p>
     <div class="cta">
       <a class="btn btn--fill" href="thesis.html">Read the thesis</a>
       <a class="btn" href="assets/cv-adrian-scholl.pdf">CV · PDF</a>
@@ -64,7 +66,7 @@
 
 <div class="status">
   <div class="wrap row"><span class="dot" aria-hidden="true"></span>
-    <span><b>Now</b> — applying for PhD positions in <b>uncertainty quantification for deep learning</b>, ideally with an energy or climate application. Munich or elsewhere in Europe. MSc completed August 2026.</span>
+    <span><b>Now</b> — applying for PhD positions in <b>uncertainty quantification and Bayesian deep learning</b>, ideally with applications in energy systems or medicine, and for research internships. Munich or elsewhere in Europe. MSc completed August 2026.</span>
   </div>
 </div>
 
@@ -72,9 +74,9 @@
   <div class="wrap">
     <div class="head">
       <h2>Research</h2>
-      <p>Where the work sits: generative modelling on one side, Bayesian uncertainty on the other, and the question of how to make deep models say what they don't know.</p>
+      <p>Two lines of work so far: Bayesian statistics and forecasting with honest uncertainty, and generative modelling in deep learning.</p>
     </div>
-    <p class="lede">My master's thesis studies how training compute should be distributed across the timestep axis of a flow-matching model; my statistical work — energy price forecasting, causal structure learning, crisis early warning — has been about predictive intervals rather than point estimates. The PhD I am looking for sits exactly where those two lines cross: uncertainty quantification for deep generative models, and calibration under distribution shift.</p>
+    <p class="lede">My statistical work, from energy price forecasting to Bayesian structure learning and crisis early warning, has been about predictive intervals rather than point estimates. My master's thesis studied how flow-matching models should spend their training compute across the timestep axis. In a PhD I want to make deep learning honest about its uncertainty: separate aleatoric from epistemic uncertainty, keep it calibrated, and make it scale, with energy systems and medicine as applications.</p>
     <div class="cards">
       <article class="card">
         <div class="tick"></div>
@@ -86,26 +88,64 @@
       <article class="card">
         <div class="tick"></div>
         <h3>Bayesian uncertainty for energy prices</h3>
-        <p>Predictive intervals for day-ahead electricity prices, and what they are worth once an arbitrage strategy has to respect them. Presented at an international summer school in Hamburg.</p>
-        <span class="meta">Bayesian · Prophet · CVXPY</span>
+        <p>An hourly price forward curve for the German power market, two to five years ahead, built with the industry partner forrs: a Bayesian seasonal model with uncertainty intervals, made arbitrage-free so that it agrees with traded futures. I later co-taught a workshop on uncertainty quantification in energy price forecasting at the summer school &ldquo;Meteorology and Markets&rdquo; in Hamburg.</p>
+        <span class="meta">Bayesian · Energy · Uncertainty intervals</span>
       </article>
       <article class="card">
         <div class="tick"></div>
         <h3>Differentiable Bayesian causal structure learning</h3>
-        <p>Master's seminar: learning graph structure by gradient descent and variational inference instead of combinatorial search over DAGs.</p>
-        <span class="meta">Causal · Variational inference</span>
+        <p>Master's seminar paper and talk on DiBS (Lorch, Rothfuss, Sch&ouml;lkopf, Krause; NeurIPS 2021), which replaces combinatorial search over DAGs with Stein variational gradient descent. My own experiments test how the graph prior and the sample size shape the posterior over graphs.</p>
+        <p><a href="https://github.com/adrian-io/diff-bayes-struct-learn">Experiments and code →</a></p>
+        <span class="meta">Causal · Stein variational gradient descent</span>
       </article>
       <article class="card">
         <div class="tick"></div>
         <h3>State-space models for conflict early warning</h3>
         <p>Bachelor's thesis and a following consulting engagement with the German Federal Foreign Office: automated conflict prediction with state-space ARIMA methods, improving on the Auto-ARIMA baseline by 56% MAE.</p>
+        <p><a href="https://github.com/adrian-io/sarimax-conflict-forecast">Code →</a></p>
         <span class="meta">State space · statsmodels · Auswärtiges Amt</span>
       </article>
     </div>
   </div>
 </section>
 
-<section class="band band--alt" id="timeline">
+<section class="band band--alt" id="writing">
+  <div class="wrap">
+    <div class="head">
+      <h2>Writing</h2>
+      <p>Theses and course papers. None of them is published or peer-reviewed.</p>
+    </div>
+    <div class="pubs">
+
+      <article class="row"><span class="yr">2026</span>
+        <div><p class="org">Master's thesis · LMU Munich</p>
+          <h3>Evaluating Adaptive Timestep Sampling for the Efficient Training of Flow Matching Models</h3>
+          <p>A. Scholl. Supervisor: Prof. Dr. Björn Ommer; advisor: Felix Krause.</p></div>
+        <div class="links"><a href="assets/scholl-adrian-master-thesis.pdf">PDF</a><a href="thesis.html">Summary</a></div></article>
+
+      <article class="row"><span class="yr">2025</span>
+        <div><p class="org">Course paper · Data Security and Data Anonymization, LMU Munich</p>
+          <h3>Graph Embedding-based Fraud Detection on the Ethereum Blockchain</h3>
+          <p>J. Wankmüller and A. Scholl, equal contribution.</p></div>
+        <div class="links"><a href="assets/wankmueller-scholl-2025-ethereum-fraud-detection.pdf">PDF</a><a href="https://github.com/adrian-io/ethXpose">Code</a></div></article>
+
+      <article class="row"><span class="yr">2025</span>
+        <div><p class="org">Course report · Time Series, Universitat Politècnica de Catalunya</p>
+          <h3>ARIMAX Model for the Gross Internal Electrical Energy Consumption in Spain 1990–2020</h3>
+          <p>A. Scholl and L. Bergstrand.</p></div>
+        <div class="links"><a href="assets/scholl-bergstrand-2025-arimax-electricity-spain.pdf">PDF</a><a href="https://github.com/adrian-io/arimax-electricity-spain">Code</a></div></article>
+
+      <article class="row"><span class="yr">2022</span>
+        <div><p class="org">Bachelor's thesis · Karlsruhe Institute of Technology</p>
+          <h3>Development of an Automated Conflict Prediction System by State Space ARIMA Methods</h3>
+          <p>A. Scholl. In cooperation with the German Federal Foreign Office.</p></div>
+        <div class="links"><a href="https://www.grin.com/document/1325354">GRIN</a><a href="https://github.com/adrian-io/sarimax-conflict-forecast">Code</a></div></article>
+
+    </div>
+  </div>
+</section>
+
+<section class="band" id="timeline">
   <div class="wrap">
     <div class="head">
       <h2>Everything, filterable</h2>
@@ -129,11 +169,17 @@
           <p>Thesis: <em>Evaluating Adaptive Timestep Sampling for the Efficient Training of Flow Matching Models</em>. Advisor: Felix Krause. Two years of statistics and computer science in equal measure, with the emphasis on statistical modelling and deep learning.</p></div>
         <div class="tags"><span class="t">flow matching</span><span class="t">PyTorch</span><span class="t">RL</span></div></article>
 
+      <article class="row" data-tags="uq forecast teach"><span class="yr">2025</span>
+        <div><p class="org">International summer school &ldquo;Meteorology and Markets&rdquo;, Hamburg</p>
+          <h3>Workshop (co-taught) — Bayesian uncertainty quantification for energy price forecasting</h3>
+          <p>Predictive intervals for energy price forecasts, taught to participants from meteorology and energy markets. Invited by Prof. Dr. Göran Kauermann; travel grant.</p></div>
+        <div class="tags"><span class="t">Bayesian</span><span class="t">energy</span><span class="t">teaching</span></div></article>
+
       <article class="row" data-tags="uq forecast"><span class="yr">2025</span>
-        <div><p class="org">International summer school, Hamburg</p>
-          <h3>Talk — Bayesian uncertainty quantification for energy price forecasting</h3>
-          <p>Predictive intervals for day-ahead prices under arbitrage constraints: how quickly the interval widens once a trading strategy has to respect it.</p></div>
-        <div class="tags"><span class="t">Bayesian</span><span class="t">energy</span><span class="t">Prophet</span></div></article>
+        <div><p class="org">Universitat Politècnica de Catalunya, Barcelona</p>
+          <h3>Erasmus — MSc Statistics and Operations Research</h3>
+          <p>A semester of time series and statistical learning with deep neural networks. Course project with Ludvig Bergstrand: SARIMA and ARIMAX models of Spain's monthly electricity demand.</p></div>
+        <div class="tags"><span class="t">time series</span><span class="t">deep learning</span><span class="t">R</span></div></article>
 
       <article class="row" data-tags="uq"><span class="yr">2025</span>
         <div><p class="org">LMU Munich</p>
@@ -147,6 +193,12 @@
           <p>Built an automated hyperparameter evaluation framework for retrieval-augmented generation in chatbot agents: HyDE retrieval, advanced chunking and re-ranking, LLM-as-a-judge scoring. Cut evaluation runtime with parallel processing and asynchronous API calls.</p></div>
         <div class="tags"><span class="t">LlamaIndex</span><span class="t">RAG</span><span class="t">async</span></div></article>
 
+      <article class="row" data-tags="uq forecast"><span class="yr">2024 — 25</span>
+        <div><p class="org">LMU Munich · Department of Statistics, Prof. Dr. Göran Kauermann, with forrs</p>
+          <h3>Data Science Practical — hourly price forward curve for the German power market</h3>
+          <p>Team of two with an industry partner: a Bayesian seasonal model with uncertainty intervals for hourly prices two to five years ahead, made arbitrage-free with a quartic-spline correction that keeps the curve consistent with traded futures.</p></div>
+        <div class="tags"><span class="t">Bayesian</span><span class="t">energy</span><span class="t">CVXPY</span></div></article>
+
       <article class="row" data-tags="data forecast"><span class="yr">2023 — 24</span>
         <div><p class="org">FINN · Fleet Intelligence Unit, Munich</p>
           <h3>Working Student, Data Analytics &amp; Analytics Engineering</h3>
@@ -158,12 +210,6 @@
           <h3>Intern, Data Analytics</h3>
           <p>Owned the project tracking car financings and predicting vehicle underutilisation costs with ML. Built the analyses, dashboards and investor answers behind a $110m Series C.</p></div>
         <div class="tags"><span class="t">Python</span><span class="t">Looker</span><span class="t">LookML</span></div></article>
-
-      <article class="row" data-tags="uq forecast"><span class="yr">2023</span>
-        <div><p class="org">Universitat Politècnica de Catalunya, Barcelona</p>
-          <h3>Erasmus — MSc Statistics and Operations Research</h3>
-          <p>A semester of statistics and optimisation abroad.</p></div>
-        <div class="tags"><span class="t">statistics</span><span class="t">optimisation</span></div></article>
 
       <article class="row" data-tags="forecast"><span class="yr">2022</span>
         <div><p class="org">Auswärtiges Amt · S 05 PREVIEW crisis early warning, Berlin</p>
@@ -180,7 +226,7 @@
       <article class="row" data-tags="forecast data"><span class="yr">2021 — 22</span>
         <div><p class="org">Auswärtiges Amt · S 05 PREVIEW, Berlin</p>
           <h3>Intern, Data Science</h3>
-          <p>Interactive dashboard for strategic analysis of the German embassy network. Conflict indicators prepared, evaluated and visualised as maps and charts; predictions presented at internal expert workshops. Consulted on process digitisation and data schemas for third-party monitoring in the Middle East.</p></div>
+          <p>Machine-learning predictions of protests, armed conflict and security-relevant incidents in the Middle East, presented at internal expert workshops. Conflict indicators prepared, evaluated and visualised as maps and charts; an interactive dashboard for strategic analysis of the German embassy network. Consulted on process digitisation and data schemas for third-party monitoring in the region.</p></div>
         <div class="tags"><span class="t">Tableau</span><span class="t">geospatial</span></div></article>
 
       <article class="row" data-tags="teach"><span class="yr">2021</span>
@@ -192,12 +238,12 @@
       <article class="row" data-tags="teach"><span class="yr">2020 — 21</span>
         <div><p class="org">Karlsruhe Institute of Technology</p>
           <h3>Tutor — Statistics II</h3>
-          <p>Around 50 students across two courses.</p></div>
+          <p>Exercise sessions for about 50 students in two groups.</p></div>
         <div class="tags"><span class="t">statistics</span><span class="t">teaching</span></div></article>
 
-      <article class="row" data-tags="teach"><span class="yr">2019 — 20</span>
-        <div><p class="org">Karlsruhe Institute of Technology</p>
-          <h3>Tutor — Computer science preparatory courses</h3>
+      <article class="row" data-tags="teach"><span class="yr">2019</span>
+        <div><p class="org">Karlsruhe Institute of Technology · MINT-Kolleg</p>
+          <h3>Tutor — Preparatory course in object-oriented programming</h3>
           <p>Java, for incoming first-year students.</p></div>
         <div class="tags"><span class="t">Java</span><span class="t">teaching</span></div></article>
 
@@ -207,17 +253,17 @@
           <p>Analysed the smart-city start-up market and evaluated partnership opportunities; presented IoT, S/4HANA and ML use cases at the Smart City Forum.</p></div>
         <div class="tags"><span class="t">analysis</span><span class="t">consulting</span></div></article>
 
-      <article class="row" data-tags="uq gen"><span class="yr">2018 — 26</span>
-        <div><p class="org">Awards &amp; programmes</p>
-          <h3>Germany Scholarship (QuantCo) · Elite Network of Bavaria</h3>
-          <p>Deutschlandstipendium sponsored by QuantCo during the bachelor's; the LMU Data Science master's is an Elite Master Program of the Elite Network of Bavaria.</p></div>
+      <article class="row" data-tags="awards"><span class="yr">2020 — 25</span>
+        <div><p class="org">Scholarships &amp; awards</p>
+          <h3>Germany Scholarship · Elite Network of Bavaria · Erasmus+ · travel grant</h3>
+          <p>Deutschlandstipendium sponsored by QuantCo (2020–21); admission to the Elite Graduate Program Data Science of the Elite Network of Bavaria (2023); Erasmus+ scholarship for UPC Barcelona (2025); travel grant for the summer school &ldquo;Meteorology and Markets&rdquo; in Hamburg (2025).</p></div>
         <div class="tags"><span class="t">scholarship</span></div></article>
 
     </div>
   </div>
 </section>
 
-<section class="band" id="projects">
+<section class="band band--alt" id="projects">
   <div class="wrap">
     <div class="head">
       <h2>Projects</h2>
@@ -225,45 +271,65 @@
     </div>
     <div class="proj">
       <article>
-        <h3>VISTA</h3>
+        <h3>Price forward curve for the German power market</h3>
         <dl>
-          <dt>Problem</dt><dd>Knowing whether you are actually concentrating while studying, rather than guessing afterwards.</dd>
-          <dt>Method</dt><dd>Webcam stream processed by a CNN to estimate attention level in real time.</dd>
-          <dt>Stack</dt><dd>Python, OpenCV, FastAPI</dd>
+          <dt>Problem</dt><dd>Utilities and traders need hourly power prices for the next two to five years that agree with the futures already traded.</dd>
+          <dt>Method</dt><dd>A Bayesian seasonal model with uncertainty intervals, plus an arbitrage-free quartic-spline correction that keeps the curve consistent with futures prices.</dd>
+          <dt>Stack</dt><dd>Python, sktime, Optuna, CVXPY</dd>
         </dl>
-        <div class="links"><a href="https://github.com/adrian-io">Code</a></div>
+        <div class="links"><a href="https://github.com/LMU-DATA-SCIENCE/price-forward-curve">Code</a></div>
+      </article>
+      <article>
+        <h3>Electricity demand forecasting for Spain</h3>
+        <dl>
+          <dt>Problem</dt><dd>Monthly demand has a trend, two seasonal peaks, moving holidays and breaks such as the 2009 slump.</dd>
+          <dt>Method</dt><dd>A SARIMA search over 550 specifications, then ARIMAX with trading-day and Easter effects and outlier correction: the 2019 hold-out MAPE falls from 2.25% to 1.73%.</dd>
+          <dt>Stack</dt><dd>R</dd>
+        </dl>
+        <div class="links"><a href="https://github.com/adrian-io/arimax-electricity-spain">Code</a><a href="assets/scholl-bergstrand-2025-arimax-electricity-spain.pdf">Report</a></div>
       </article>
       <article>
         <h3>EthXPose</h3>
         <dl>
           <dt>Problem</dt><dd>Fraud on Ethereum hides in the structure of transactions, not in single transfers.</dd>
-          <dt>Method</dt><dd>Graph embeddings over the transaction network, classified against known fraudulent wallets.</dd>
-          <dt>Stack</dt><dd>Python, graph embeddings, web app</dd>
+          <dt>Method</dt><dd>Feather-G and Graph2Vec embeddings of each wallet's transaction graph, classified with gradient boosting: 93.9% accuracy on wallet data from XBlock.</dd>
+          <dt>Stack</dt><dd>Python, karateclub, scikit-learn, FastAPI, Next.js</dd>
         </dl>
-        <div class="links"><a href="https://github.com/adrian-io">Code</a></div>
+        <div class="links"><a href="https://github.com/adrian-io/ethXpose">Code</a><a href="assets/wankmueller-scholl-2025-ethereum-fraud-detection.pdf">Paper</a></div>
       </article>
       <article>
-        <h3>Bayesian energy price modelling</h3>
+        <h3>VISTA</h3>
         <dl>
-          <dt>Problem</dt><dd>A point forecast of the day-ahead price is useless to a battery operator who has to commit to a schedule.</dd>
-          <dt>Method</dt><dd>Bayesian forecasting with explicit predictive intervals, optimised under arbitrage constraints.</dd>
-          <dt>Stack</dt><dd>Prophet, CVXPY, statsmodels</dd>
+          <dt>Problem</dt><dd>Knowing whether you are actually concentrating while studying, rather than guessing afterwards.</dd>
+          <dt>Method</dt><dd>MediaPipe face mesh, head pose and a gaze-estimation CNN label each webcam frame as concentrated, distracted or absent, then turn sessions into statistics and alerts.</dd>
+          <dt>Stack</dt><dd>Python, FastAPI, MediaPipe, PyTorch, Next.js</dd>
+          <dt>Team</dt><dd>Five students; I built the backend with two of them</dd>
         </dl>
+      </article>
+      <article>
+        <h3>Aurora Media</h3>
+        <dl>
+          <dt>Problem</dt><dd>A media company loses customers who cannot find content they want. AI consulting case at McKinsey / QuantumBlack's &ldquo;New Horizon&rdquo; event in Barcelona.</dd>
+          <dt>Method</dt><dd>An agentic n8n workflow over customer data and the media catalogue: front-page recommendations, personalised semantic search and generated outreach emails.</dd>
+          <dt>Stack</dt><dd>n8n, React, TypeScript</dd>
+        </dl>
+        <div class="links"><a href="https://github.com/adrian-io/aurora-media-hub">Code</a></div>
       </article>
       <article>
         <h3>Default prediction for commercial real estate</h3>
         <dl>
           <dt>Problem</dt><dd>Which commercial property mortgages default, and on what evidence.</dd>
-          <dt>Method</dt><dd>Supervised classification with careful treatment of class imbalance and feature leakage.</dd>
+          <dt>Method</dt><dd>Supervised classification with careful treatment of class imbalance and feature leakage. KIT course project with Lucas Bleher.</dd>
           <dt>Stack</dt><dd>scikit-learn, pandas</dd>
         </dl>
+        <div class="links"><a href="https://github.com/adrian-io/mortgage-default-prediction">Code</a></div>
       </article>
     </div>
-    <p style="margin-top:22px;color:var(--muted);font-size:15px">Also: PISA score prediction with pooled OLS and clustered standard errors · health insurance cost prediction · a Java GUI for university course management.</p>
+    <p style="margin-top:22px;color:var(--muted);font-size:15px">Also: <a href="https://github.com/adrian-io/pisa-clustered-ols">PISA score prediction with pooled OLS and clustered standard errors</a> · <a href="https://github.com/adrian-io/medical-cost-prediction">health insurance cost prediction</a> · <a href="https://github.com/adrian-io/course-directory-gui">a Java GUI for university course management</a>.</p>
   </div>
 </section>
 
-<section class="band band--alt" id="toolbox">
+<section class="band" id="toolbox">
   <div class="wrap">
     <div class="head"><h2>Toolbox</h2><p>Honest levels — the things I would be comfortable being asked about in an interview.</p></div>
     <div class="split">
@@ -275,13 +341,13 @@
       <ul class="stack">
         <li><span class="k">Data</span><span><strong>SQL</strong>, R, dbt, BigQuery, Looker and LookML, Tableau, GSheets, Excel</span></li>
         <li><span class="k">Languages</span><span>German (native) · English (C1) · Spanish (B2) · French (A2)</span></li>
-        <li><span class="k">Teaching</span><span>Three years of university tutorials in statistics, econometrics and programming</span></li>
+        <li><span class="k">Teaching</span><span>University tutorials at KIT in statistics, econometrics and programming (2019 to 2021), and a co-taught summer-school workshop (2025)</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="band" id="about">
+<section class="band band--alt" id="about">
   <div class="wrap">
     <div class="head"><h2>About</h2></div>
     <div class="about">
@@ -290,17 +356,17 @@
       </div>
       <div>
         <p>I came to machine learning through industrial engineering at KIT, and to statistics through a Foreign Office project on predicting armed conflict — which is where I learned that a forecast without an honest interval is a liability rather than an asset.</p>
-        <p>Since then: a semester of statistics and operations research in Barcelona, an Elite Master's in Data Science at LMU Munich, a thesis in the Computer Vision &amp; Learning group on how flow-matching models should spend their training budget, and four years of applied work — data warehouses at FINN, retrieval-augmented chatbots at Scalable Capital, crisis early warning in Berlin.</p>
-        <p>What holds it together is a preference for models that are explicit about their own uncertainty. That is the thread I want to keep pulling in a PhD, preferably somewhere the answer matters — energy systems, climate, infrastructure.</p>
+        <p>Since then: an Elite Master's in Data Science at LMU Munich with an exchange semester in Barcelona, a thesis in the Computer Vision &amp; Learning group on how flow-matching models should spend their training budget, and four years of applied work — data warehouses at FINN, retrieval-augmented chatbots at Scalable Capital, crisis early warning in Berlin.</p>
+        <p>What holds it together is a preference for models that are explicit about their own uncertainty. That is the thread I want to keep pulling in a PhD, preferably where the answer matters, such as energy systems and medicine.</p>
         <p>Outside that: three and a half languages, long-distance hiking maps, and an ongoing argument with myself about whether Bayesian methods scale.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="band band--alt" id="contact">
+<section class="band" id="contact">
   <div class="wrap">
-    <div class="head"><h2>Contact</h2><p>Email is the reliable channel. Happy to send the full CV, transcripts or the thesis on request.</p></div>
+    <div class="head"><h2>Contact</h2><p>Email is the reliable channel. Happy to send transcripts and certificates on request.</p></div>
     <p class="lede" id="mailline"><noscript>adrian.scholl99 [at] gmail [dot] com</noscript></p>
     <div class="contact">
       <a class="btn btn--fill" id="mailbtn" href="#">Write me</a>
